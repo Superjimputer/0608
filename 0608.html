@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0608</title>
+</head>
+<body>
+   
+   <div class="box">About</div>
+   <div class="box">Blog</div>
+   <div class="box">Contacts</div>
+   
+   <input type="text" id="n">
+   <button onclick="guess()">Submit</button>
+   <div id="output"></div>
+   
+    <script>
+        var a = 123;
+        var b = "QQQ";
+    
+        var x = Array("HTML", "CSS", "JAVASCRIPT");
+        var y = ["HTML", "CSS", "JAVASCRIPT"];
+        
+        console.log(x);
+        console.log(y);
+        console.log(y[0]);
+        
+        var y_length = y.length;
+        console.log(y[y_length-1]);
+        
+        var box = document.getElementsByClassName("box")[1];
+        console.log(box);
+        
+//        if(){};
+//        if(){}else{};
+        
+        var z = 100;
+
+        if(z==80){console.log("Condition Satisfied")}else{console.log("Condition Failed")};
+        if(z>=80){console.log(80);}else if(z>=60){console.log(60);}else{cosole.log("Error");}
+        z>60?console.log("Success"):console.log("Error");
+        
+        switch(z){
+            case 60:console.log(60);break;
+            case 80:console.log(80);break;
+            case 100:console.log(100);break;
+            default:console.log("Error");
+        }
+        
+        var ans = Math.round(Math.random()*10);
+        console.log(ans);
+        
+        function guess(){        
+            var n = document.getElementById("n").value;
+            if(isNaN(n)){alert("Enter a Number");}else{
+                if(n>ans){document.getElementById("output").innerHTML="Smaller";}
+                else if(n<ans){document.getElementById("output").innerHTML="Larger";}
+                else if(n==ans){alert("Boom",location.reload());}
+            }
+        }
+            
+        function guess(){        
+            var n = document.getElementById("n").value;
+            if(!isNaN(n)){}
+        
+            else{alert("Enter a Number");}
+
+    </script>
+    
+    
+</body>
+</html>

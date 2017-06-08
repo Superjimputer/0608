@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="n">
+    <button onclick="guess()">送出</button>
+    <div id="output"></div>
+
+    <script>
+        var ans = Math.round(Math.random() * 100);
+        //Math.ceil無條件進位 Math.floor無條件捨去
+        console.log(ans);
+
+        function guess() {
+            var n = document.getElementById("n").value;
+            if (isNaN(n)) {
+                alert("請輸入0-100的數值");
+            } else {
+                if (n > ans) {
+                    document.getElementById("output").innerHTML = "小一點";
+                    //                    document.getElementById("n").value = "";
+
+                } else if (n < ans) {
+                    document.getElementById("output").innerHTML = "大一點";
+//                    document.getElementById("n").value = "";
+                } else if (n == ans) {
+                    alert("LOSER",location.reload());
+                }
+            }
+        }
+        //        if(!isNaN(n)){
+        //            
+        //        }else{
+        //            alert("請輸入0-100的數值");
+        //        }
+
+    </script>
+</body>
+
+</html>
